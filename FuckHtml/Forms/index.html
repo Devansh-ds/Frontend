@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text Basics</title>
+    <link rel="stylesheet" href="main.css" />
+    <link rel="icon" href="../resources/html5.png" type="image/x-icon" />
+  </head>
+  <body>
+    <header>
+      <h1>Hello World</h1>
+      <nav aria-label="primary-navigation">
+        <ul>
+          <li><a href="#Heading">Learn about headings</a></li>
+          <li><a href="#TheFuck">Fuck your mind</a></li>
+          <li><a href="#contact">Contact me</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <hr />
+
+    <main>
+      <article id="Heading">
+        <h2>This is the sub heading</h2>
+        <p>This is the paragraph of sub heading</p>
+
+        <section>
+          <h2>This is the sub - sub heading</h2>
+          <p>This is the <strong>paragraph</strong> of</p>
+          <img
+            src="../resources/html_logo_300x300.png"
+            alt="If no image"
+            title="Text to complement our image"
+            width="200"
+            height="220"
+          />
+
+          <figure>
+            <figcaption>
+              Caption of Html Logo without image inside figure
+            </figcaption>
+            <p>
+              <code> &lt;h1&gt; Hello World &lt;/h1&gt; </code>
+            </p>
+          </figure>
+        </section>
+
+        <section>
+          <ol>
+            <li>...sub heading</li>
+            <li>...another subheading</li>
+            <li>
+              Why the fuck so many
+              <a href="https://www.youtube.com/">line breaks</a>.
+            </li>
+            <li>We are going to learn address</li>
+          </ol>
+
+          <aside>
+            <details>
+              <summary>
+                Guess the <mark>number of hours</mark> I code today
+              </summary>
+              <p>I studied only fucking <time datetime="01:00">1 hour</time></p>
+            </details>
+          </aside>
+
+          <address>
+            E-1/37 Budh Vihar, Phase-1
+            <br />New Delhi <br />India
+          </address>
+        </section>
+      </article>
+
+      <hr />
+
+      <article id="TheFuck">
+        <h2>This is John Cena</h2>
+        <p>You can't see me bitch</p>
+        <p>How the fuck so many paragraph only under my sub heading</p>
+        <p>abbreavation bro -&gt; <abbr title="Devansh Singla">DS</abbr></p>
+
+        <section>
+          <h3>I am &nbsp;&nbsp;&nbsp;Devansh</h3>
+          <p>I should <em>kill</em> myself. But How I should do it?</p>
+
+          <ul>
+            <li>shotgun through head</li>
+            <li>
+              hang from fan
+              <figure>
+                <img
+                  src="../resources/vacation.jpg"
+                  alt="A vacation image"
+                  title="I want to go"
+                  width="400"
+                  loading="lazy"
+                />
+                <figcaption>
+                  This is the caption for the vacation image
+                </figcaption>
+              </figure>
+            </li>
+            <li>
+              <p>jump from the building</p>
+              <figure>
+                <img
+                  src="../resources/caribbean.jpg"
+                  alt="caribbean vacation"
+                  title="I want to sleep there"
+                  loading="lazy"
+                  width="400"
+                  height="267"
+                />
+                <figcaption>A beach with blue water.</figcaption>
+              </figure>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Why should I kill myself</h3>
+          <dl>
+            <dt>Finance</dt>
+            <dd>Poor as fuck</dd>
+            <dt>Looks</dt>
+            <dd>Fat fucker</dd>
+            <dt>Career</dt>
+            <dd>Fucked up probably</dd>
+          </dl>
+        </section>
+      </article>
+
+      <hr />
+
+      <article id="contact">
+        <h2>Contact me</h2>
+        <p>Fill the form and I won't contact you anyways</p>
+
+        <form action="https://httpbin.org/get" method="get">
+          <fieldset>
+            <legend>Personal Info</legend>
+            <p>
+              <label for="firstName">First Name:</label>
+              <input
+                type="text"
+                name="firstName"
+                id="firstName"
+                placeholder="John"
+                autocomplete="on"
+                required
+                autofocus
+              />
+            </p>
+            <p>
+              <label for="lastName">Last Name:</label>
+              <input
+                type="text"
+                name="lastName"
+                id="lastName"
+                placeholder="Doe"
+                autocomplete="on"
+                required
+              />
+            </p>
+            <p>
+              <label for="password">Password:</label>
+              <input
+                type="password"
+                name="password"
+                id="password"
+                placeholder="your password"
+                autocomplete="off"
+                required
+              />
+            </p>
+            <p>
+              <label for="phone">Phone:</label>
+              <input
+                type="tel"
+                name="phone"
+                id="phone"
+                placeholder="+91 9876546785"
+                pattern="+[0-9]{2} [0-9]{10}"
+                required
+              />
+            </p>
+            <p>
+              <label for="decade">Favourite decade:</label>
+              <input
+                type="number"
+                name="decade"
+                id="decade"
+                min="1950"
+                max="2020"
+                step="10"
+                value="1980"
+              />
+            </p>
+            <p>
+              <label for="coffee">Favourite coffee</label>
+              <select name="coffee" id="coffee" multiple size="5">
+                <optgroup label="coffees">
+                  <option value="regular coffee">Regular Coffee</option>
+                  <option value="iced coffee">Iced coffee</option>
+                  <option value="lattee" selected>Lattee</option>
+                </optgroup>
+                <optgroup label="expresso drinks">
+                  <option value="cappuccino">Cappuccino</option>
+                  <option value="cortado">Cortado</option>
+                  <option value="americano">Americano</option>
+                </optgroup>
+                <option value="other">Other</option>
+              </select>
+            </p>
+            <!-- <p>
+            <label for="coffee">Favourite coffee</label>
+            <input type="text" name="coffee" id="coffee" list="coffee-list" />
+            <datalist id="coffee-list">
+              <option value="regular coffee"></option>
+              <option value="iced coffee"></option>
+              <option value="lattee" selected></option>
+              <option value="cappuccino"></option>
+              <option value="cortado"></option>
+              <option value="americano"></option>
+              <option value="other"></option>
+            </datalist>
+          </p> -->
+          </fieldset>
+          <br />
+          <fieldset>
+            <legend>What is your favourite food</legend>
+            <p>
+              <input type="radio" name="food" id="tacos" value="tacos" />
+              <label for="tacos">Tacos</label>
+            </p>
+            <p>
+              <input type="radio" name="food" id="pizza" value="pizza" />
+              <label for="pizza">Pizza</label>
+            </p>
+            <p>
+              <input type="radio" name="food" id="other" value="other" />
+              <label for="other">Other</label>
+            </p>
+          </fieldset>
+          <fieldset>
+            <legend>Do you have pets?</legend>
+            <p>
+              <input type="checkbox" name="pets" id="dog" value="dog" />
+              <label for="dog">Dog</label>
+            </p>
+            <p>
+              <input type="checkbox" name="pets" id="cat" value="cat" />
+              <label for="cat">Cat</label>
+            </p>
+            <p>
+              <input type="checkbox" name="pets" id="fish" value="fish" />
+              <label for="fish">fish</label>
+            </p>
+            <p>
+              <input
+                type="checkbox"
+                name="pets"
+                id="otherPet"
+                value="otherPet"
+              />
+              <label for="otherPet">Other</label>
+            </p>
+          </fieldset>
+          <fieldset>
+            <legend>Send me a note</legend>
+            <label for="message">Your Message:</label>
+            <br />
+            <textarea
+              name="message"
+              id="message"
+              cols="60"
+              rows="10"
+              placeholder="Type your message Here"
+            ></textarea>
+          </fieldset>
+          <br />
+          <button type="submit  ">Submit</button>
+          <button
+            type="submit"
+            formaction="https://httpbin.org/post"
+            formmethod="post"
+          ></button>
+          <button type="reset">Reset</button>
+        </form>
+      </article>
+    </main>
+
+    <hr />
+
+    <footer>
+      <p>Your's truly <a href="about.html">Devansh</a> &copy;</p>
+
+      <p>
+        <a href="#">Back To top</a>
+      </p>
+    </footer>
+  </body>
+</html>
