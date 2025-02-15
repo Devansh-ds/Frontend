@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+}
+
+h1 {
+  border: 2px dashed red;
+  font-size: 2rem;
+  padding: 0.5em;
+}
+
+header {
+  width: 50%;
+}
+
+main {
+  width: 50vw;
+  background-color: goldenrod;
+  font-size: 2rem;
+}
+
+p {
+  font-size: 2rem;
+  width: 40ch;
+}
