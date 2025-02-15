@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1rem;
+  background-color: whitesmoke;
+}
+
+header {
+  text-align: center;
+  padding: 2rem;
+  background-color: rgb(88, 187, 88);
+  color: whitesmoke;
+}
+
+header p {
+  margin-top: 1.5rem;
+}
+
+nav {
+  background-color: rgb(56, 47, 47);
+  color: antiquewhite;
+  padding: 1rem;
+}
+
+article nav p {
+  text-align: center;
+  margin-top: 0rem;
+}
+
+a {
+  color: whitesmoke;
+  text-decoration: none;
+  padding: 2rem;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+  color: red;
+}
+
+.slides {
+  padding: 2rem 1rem;
+  background-color: white;
+  border-radius: 10px;
+  margin: 20px 40px;
+}
+
+article h2 {
+  color: rgb(26, 115, 240);
+  font-size: 1.5rem;
+}
+
+article p {
+  margin-top: 1rem;
+}
+
+li {
+  list-style-type: none;
+  margin-top: 1rem;
+}
+
+strong {
+  color: rgb(26, 115, 240);
+}
+
+label {
+  display: block;
+  text-align: center;
+}
+
+input,
+textarea,
+button {
+  width: 60%;
+  height: 2rem;
+  display: block;
+  margin: 1rem auto;
+  margin-top: 0rem;
+}
+
+textarea {
+  height: 20vh;
+}
+
+button {
+  background-color: rgb(26, 115, 240);
+  color: white;
+  border-radius: 15px;
+}
+
+tr,
+th,
+td {
+  outline: 2px solid gray;
+  margin: 0;
+  padding: 10px;
+}
+
+th {
+  background-color: rgb(224, 221, 221);
+}
