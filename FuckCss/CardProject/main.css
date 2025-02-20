@@ -1,0 +1,170 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+body {
+  font-size: 1.5rem;
+  min-height: 100vh;
+  background-color: wheat;
+  background-image: radial-gradient(wheat, lime);
+  display: flex;
+  flex-direction: column;
+}
+
+header,
+footer {
+  position: sticky;
+  background-color: green;
+  color: peachpuff;
+  text-align: center;
+}
+
+header {
+  top: 0;
+}
+
+nav {
+  background-color: white;
+  padding: 0.5rem;
+  border-bottom: 2px solid black;
+  font-weight: bolder;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+nav a:any-link {
+  color: gold;
+}
+
+nav a,
+nav a:visited {
+  color: black;
+}
+
+nav :is(a:hover, a:focus) {
+  color: hsla(0, 0%, 20%, 0.6);
+}
+
+nav a:active {
+  color: red;
+}
+
+main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+footer {
+  bottom: 0;
+}
+
+.card {
+  scroll-margin-top: 8rem;
+  width: min(100%, 350px);
+  background-color: antiquewhite;
+  border: 2px solid black;
+  border-radius: 15px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card:target {
+  border: 2px solid rebeccapurple;
+}
+
+.card figure {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.card img {
+  border: 5px double black;
+  border-radius: 50%;
+}
+
+.card img[alt] {
+  border: 10px solid red;
+}
+
+.card figcaption {
+  font-weight: bolder;
+  font-size: 2rem;
+  margin: 1rem;
+  text-align: center;
+}
+
+.card figcaption::after {
+  content: " hello";
+}
+
+.card p::before {
+  content: open-quote;
+}
+
+@media screen and (min-width: 576px) {
+  main {
+    justify-content: center;
+    flex-flow: row wrap;
+    padding: 1rem;
+  }
+
+  .card {
+    width: min(100%, 400px);
+  }
+
+  .card:last-child {
+    order: -1;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    background-color: gold;
+    background-image: radial-gradient(whitesmoke, gold);
+  }
+}
+
+@media screen and (min-width: 992px) {
+  body {
+    background-color: firebrick;
+    background-image: radial-gradient(whitesmoke, firebrick);
+  }
+}
+
+@media screen and (max-height: 425px) and (min-aspect-ration: 7/4) {
+  body {
+    background-color: rebeccapurple;
+    background-image: radial-gradient(whitesmoke, rebeccapurple);
+  }
+
+  h1,
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  nav {
+    display: none;
+  }
+}
