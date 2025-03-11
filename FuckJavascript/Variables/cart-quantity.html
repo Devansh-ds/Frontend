@@ -16,8 +16,9 @@
         Show Quantity
       </button>
       <button
-        onclick="quantity++;
-      console.log(`Quantity: ${quantity}`);"
+        onclick="
+        quantity >= 10 ? console.log(`Cart is full`) :
+        console.log(`Quantity: ${++quantity}`);"
       >
         Add to Cart
       </button>
