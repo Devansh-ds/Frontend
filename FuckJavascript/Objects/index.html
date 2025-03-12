@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Objects</title>
+  </head>
+  <body>
+    <script>
+      const product = {
+        name: "socks",
+        price: 1090,
+      };
+      console.log(typeof product);
+      console.log(product);
+      console.log(product.name);
+
+      product.name = {
+        a: "hi",
+        b: "bye",
+      };
+      console.log(product);
+
+      product.newProperty = "new property'";
+      console.log(product);
+      
+      delete product.newProperty;
+      console.log(product);
+    </script>
+  </body>
+</html>
