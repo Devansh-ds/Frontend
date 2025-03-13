@@ -1,0 +1,13 @@
+.btn {
+  background-color: black;
+  color: white;
+  font-size: 15px;
+  padding: 8px 12px;
+  border-radius: 5px;
+  border: none;
+}
+
+.is-toggled {
+  background-color: aliceblue;
+  color: black;
+}
