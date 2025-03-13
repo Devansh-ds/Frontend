@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Challenge Exercise</title>
+  </head>
+  <body>
+    <p>
+      <button onclick="playGame('heads')">heads</button>
+      <button onclick="playGame('tails')">tails</button>
+    </p>
+    <script>
+      let score = JSON.parse(localStorage.getItem("score")) || {
+        wins: 0,
+        looses: 0,
+      };
+      function playGame(guess = "heads") {
+        const ai = Math.random();
+        let aiguess = "";
+        if (ai > 0.5) {
+          aiguess = "heads";
+        } else {
+          aiguess = "tails";
+        }
+
+        if (aiguess == guess) {
+          score.wins += 1;
+        } else {
+          score.looses += 1;
+        }
+
+        console.log(`Score- Wins: ${score.wins}, Loss: ${score.looses}`);
+
+        localStorage.setItem("score", JSON.stringify(score));
+      }
+    </script>
+  </body>
+</html>
