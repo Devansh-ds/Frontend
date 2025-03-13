@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise of DOM</title>
+  </head>
+  <body>
+    <button>9a</button>
+    <button class="second-btn">9b</button>
+
+    <br />
+
+    <p>
+      <button onclick="showBtn(`heads`)">heads</button>
+      <button onclick="showBtn(`tails`)">tails</button>
+    </p>
+
+    <p class="head-tail"></p>
+
+    <br />
+
+    <p>
+      <input onkeydown="showNameKeydown(event)" class="js-input" type="text" placeholder="Name" />
+      <button onclick="showName()">Submit</button>
+
+      <p class="input-submit"></p>
+    </p>
+
+    <script>
+      const btn = document.querySelector("button");
+      console.log(btn.innerHTML);
+
+      const btn2 = document.querySelector(".second-btn");
+      btn2.innerHTML = "9b done!";
+
+      function showBtn(item) {
+        const ht = document.querySelector(".head-tail");
+        ht.innerHTML = `You chose: ${item}`;
+      }
+
+      function showNameKeydown(event) {
+        if (event.key === 'Enter') {
+            showName();
+        }
+      }
+
+      function showName() {
+        const si = document.querySelector('.js-input');
+        const siDisplay = document.querySelector('.input-submit');
+
+        siDisplay.innerHTML = `Your name is: ${si.value}`;
+      }
+    </script>
+  </body>
+</html>

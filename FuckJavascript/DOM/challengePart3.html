@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cart-quantity</title>
+  </head>
+  <body>
+    <p>Cart Quantity</p>
+    <p>
+      <button
+        onclick="
+        display(quantity);
+        "
+      >
+        Show Quantity
+      </button>
+      <button
+        onclick="
+        quantity >= 10 ? console.log(`Cart is full`) :
+        display(quantity);"
+      >
+        Add to Cart
+      </button>
+      <button
+        onclick="quantity += 2;
+      display(quantity);"
+      >
+        +2
+      </button>
+      <button
+        onclick="quantity += 3;
+      display(quantity);"
+      >
+        +3
+      </button>
+      <button onclick="
+        quantity += 4;
+        display(quantity);;
+      ">+4</button>
+      <button onclick="
+        quantity += 5;
+        display(quantity);
+      ">+5</button>
+      <p></p>
+      <button
+        onclick="quantity = 0;
+      display(quantity);"
+      >
+        Reset Cart
+      </button>
+      <button onclick="
+      quantity -= 1;
+      display(quantity);;
+      ">Remove from Cart</button>
+
+      <button onclick="
+      quantity--;
+      quantity--;
+      display(quantity);
+      ">-2</button>
+      <button onclick="
+      quantity -= 3;
+      display(quantity);
+      ">-3</button>
+    </p>
+
+    <p class="display-cart"></p>
+
+    <script>
+      let quantity = 0;
+
+        function display(quantity) {
+            document.querySelector('.display-cart')
+                .innerHTML = `Cart quantity: ${quantity}`;
+        }
+
+
+    </script>
+  </body>
+</html>

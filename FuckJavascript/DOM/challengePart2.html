@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Challenge part 2</title>
+  </head>
+  <body>
+    <p>
+      <input onkeyup="continueWrite()" class="js-input" type="text" />
+    </p>
+    <p class="result"></p>
+
+    <script>
+      function continueWrite() {
+        const display = document.querySelector(".result");
+        const ans = document.querySelector("input");
+        display.innerHTML = ans.value;
+      }
+    </script>
+  </body>
+</html>
