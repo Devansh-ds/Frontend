@@ -92,13 +92,67 @@ let intervalId;
 
 function autoplay() {
   if (!isAutoPlaying) {
-    intervalId = setInterval(function () {
+    intervalId = setInterval(() => {
       const playerMove = pickComputerMove();
       playGame(playerMove);
     }, 1000);
     isAutoPlaying = true;
+    document.querySelector(".js-autoplay-btn").innerHTML = "Stop playing";
   } else {
     clearInterval(intervalId);
     isAutoPlaying = false;
+    document.querySelector(".js-autoplay-btn").innerHTML = "Auto Play";
   }
 }
+
+document.querySelector(".js-rock-button").addEventListener("click", () => {
+  playGame("rock");
+});
+
+document.querySelector(".js-paper-button").addEventListener("click", () => {
+  playGame("paper");
+});
+
+document.querySelector(".js-scissor-button").addEventListener("click", () => {
+  playGame("scissors");
+});
+
+document.body.addEventListener("keydown", (event) => {
+  if (event.key === "r") {
+    playGame("rock");
+  } else if (event.key === "p") {
+    playGame("paper");
+  } else if (event.key === "s") {
+    playGame("scissors");
+  } else if (event.key === "a") {
+    autoplay();
+  } else {
+    console.log("only r, p and s");
+  }
+});
+
+const autoBtn = document.querySelector(".js-autoplay-btn");
+autoBtn.addEventListener("click", () => autoplay());
+
+const resetBtn = document.querySelector(".js-reset-btn");
+resetBtn.addEventListener("click", () => {
+  document.querySelector(".popup").classList.remove("popup-toggle");
+});
+
+const getYesBtn = document.querySelector(".reset-yes-btn");
+
+const getNoBtn = document.querySelector(".reset-no-btn");
+
+getYesBtn.addEventListener("click", () => {
+  score.wins = 0;
+  score.losses = 0;
+  score.ties = 0;
+  localStorage.removeItem("score");
+  updateScoreElement();
+
+  document.querySelector(".popup").classList.add("popup-toggle");
+});
+
+getNoBtn.addEventListener("click", () => {
+  document.querySelector(".popup").classList.add("popup-toggle");
+});

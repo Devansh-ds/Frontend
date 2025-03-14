@@ -6,7 +6,22 @@
     <title>Advanced Functions</title>
   </head>
   <body>
+    <button class="js-btn">Click</button>
     <script>
+      // const buttonElement = document.querySelector(".js-btn");
+      // const eventListener = () => {
+      //   console.log("button clicked");
+      // };
+
+      // buttonElement.addEventListener("click", eventListener);
+      // buttonElement.removeEventListener("click", eventListener);
+
+      // buttonElement.addEventListener("click", () => {
+      //   console.log("button clicked from different function");
+      // });
+
+      // ------------------------------------------------
+
       //   function greeting() {
       //     console.log("hello");
       //   }
@@ -51,9 +66,53 @@
       //   console.log("interval will display again and again");
       // }, 3000);
 
-      ["make dinner", "wash dishes", "watch youtube"].forEach(function (value, index) {
-        console.log(index + ":" + value);
+      // -----------------------------------------------------
+
+      // ["make dinner", "wash dishes", "watch youtube"].forEach((value, index) => console.log(index + ":" + value));
+
+      // const regularFunction = function (param) {
+      //   console.log("amigo");
+      //   return 4;
+      // };
+
+      // const arrowFunction = (param) => {
+      //   console.log("hello");
+      //   return 4;
+      // };
+
+      // arrowFunction();
+
+      // // we can remove () around the SINGLE parameter
+      // const oneParam = (param) => {
+      //   console.log(param);
+      // };
+      // oneParam(2);
+
+      // const oneLine = () => 2 + 3;
+      // console.log(oneLine());
+
+      // const object2 = {
+      //   method: () => {
+
+      //   },
+      //   method() {
+
+      //   }
+      // }
+
+      // -----------------------------------------
+
+      const ans = [1, -2, 3, -5, 0, -3].filter((value, index) => {
+        return value >= 0;
       });
+      console.log(ans);
+
+      const ans2 = [1, 1, 2, 3].map((value, index) => {
+        return value * 10;
+      });
+      console.log(ans2);
+
+      
     </script>
   </body>
 </html>
