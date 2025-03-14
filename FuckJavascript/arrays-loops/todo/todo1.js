@@ -14,8 +14,7 @@ renderTodoList();
 function renderTodoList() {
   let todoListHtml = "";
 
-  for (let i = 0; i < todoList.length; i++) {
-    const todoObject = todoList[i];
+  todoList.forEach(function (todoObject, i) {
     const { name, dueDate } = todoObject;
     const html = `
       <div>
@@ -30,7 +29,7 @@ function renderTodoList() {
         " class='delete-todo-btn'>Delete</button>
        `;
     todoListHtml += html;
-  }
+  });
 
   console.log(todoListHtml);
 

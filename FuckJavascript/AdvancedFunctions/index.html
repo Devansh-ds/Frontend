@@ -39,15 +39,21 @@
       //     console.log("from function to function");
       //   });
 
-      setTimeout(function () {
-        console.log("timeout runs this fun after certain time");
-      }, 3000);
+      // -----------------------------------------------
 
-      console.log("next line");
+      // setTimeout(function () {
+      //   console.log("timeout runs this fun after certain time");
+      // }, 3000);
 
-      setInterval(function () {
-        console.log("interval will display again and again");
-      }, 3000);
+      // console.log("next line");
+
+      // setInterval(function () {
+      //   console.log("interval will display again and again");
+      // }, 3000);
+
+      ["make dinner", "wash dishes", "watch youtube"].forEach(function (value, index) {
+        console.log(index + ":" + value);
+      });
     </script>
   </body>
 </html>
