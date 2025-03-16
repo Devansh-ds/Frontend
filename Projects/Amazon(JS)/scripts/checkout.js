@@ -1,4 +1,4 @@
-import { cart } from "../data/cart.js";
+import { cart, removeFromCart } from "../data/cart.js";
 import { products } from "../data/products.js";
 import { formatCurrency } from "./utils/money.js";
 
@@ -15,7 +15,7 @@ cart.forEach((cartItem) => {
   });
 
   cartSummaryHtml += `
-    <div class="cart-item-container">
+    <div class="cart-item-container js-cart-item-${matchingProduct.id}">
         <div class="delivery-date">Delivery date: Tuesday, June 21</div>
 
         <div class="cart-item-details-grid">
@@ -30,7 +30,7 @@ cart.forEach((cartItem) => {
                 <span class="quantity-label">${cartItem.quantity}</span>
                 </span>
                 <span class="update-quantity-link link-primary">Update</span>
-                <span class="delete-quantity-link link-primary">Delete</span>
+                <span data-product-id="${matchingProduct.id}" class="delete-quantity-link link-primary js-delete-link">Delete</span>
             </div>
             </div>
 
@@ -64,3 +64,32 @@ cart.forEach((cartItem) => {
 });
 
 document.querySelector(".js-order-summary").innerHTML = cartSummaryHtml;
+
+document.querySelectorAll(".js-delete-link").forEach((link) => {
+  link.addEventListener("click", () => {
+    const productId = link.dataset.productId;
+    removeFromCart(productId);
+    const container = document.querySelector(`.js-cart-item-${productId}`);
+    container.remove();
+
+    calculateCheckoutQuantity();
+  });
+});
+
+calculateCheckoutQuantity();
+
+function calculateCheckoutQuantity() {
+  const checkoutLink = document.querySelector(".js-checkout-quantity");
+  let totalQuantity = 0;
+  cart.forEach((cartItem) => {
+    totalQuantity += cartItem.quantity;
+  });
+  console.log(totalQuantity);
+  checkoutLink.innerHTML = `${totalQuantity} items`;
+
+  updateCartQuantityImageOnAmazon(totalQuantity);
+}
+
+function updateCartQuantityImageOnAmazon(totalQuantity) {
+  localStorage.setItem("quantityImage", totalQuantity);
+}

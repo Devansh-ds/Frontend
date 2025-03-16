@@ -3,7 +3,6 @@ import { products } from "../data/products.js";
 import { formatCurrency } from "./utils/money.js";
 
 let productsHtml = "";
-
 products.forEach((product) => {
   productsHtml += `
     <div class="product-container">
@@ -88,11 +87,15 @@ document.querySelectorAll(".js-add-to-cart").forEach((button) => {
   });
 });
 
+document.querySelector(".js-cart-quantity").innerHTML = Number(localStorage.getItem("quantityImage"));
+
 function updateCartQuantityImage() {
   let cartQuantity = 0;
   cart.forEach((item) => {
     cartQuantity += item.quantity;
   });
+
+  localStorage.setItem("quantityImage", cartQuantity);
 
   document.querySelector(".js-cart-quantity").innerHTML = cartQuantity;
 }
