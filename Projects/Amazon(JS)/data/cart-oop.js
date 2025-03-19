@@ -70,7 +70,7 @@ function Cart(localStorageKey) {
       this.cartItems.forEach((item) => {
         if (item.productId === productId) {
           matchingItem = item;
-        }                                   
+        }
       });
       matchingItem.deliveryOptionId = deliveryOptionId;
       this.saveToStorage();
@@ -90,3 +90,5 @@ cart.addToCart("ee1f7c56-f977-40a4-9642-12ba5072e2b0");
 
 console.log(cart);
 console.log(businessCart);
+
+
