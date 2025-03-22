@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock paper Scissors</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="header">
+      <h1>Rock Paper Scissors</h1>
+    </div>
+
+    <div class="choices">
+      <button class="user-move js-rock" id="rock"><img src="images/rock-emoji.png" alt="" /></button>
+      <button class="user-move js-paper" id="paper"><img src="images/paper-emoji.png" alt="" /></button>
+      <button class="user-move js-scissors" id="scissors"><img src="images/scissors-emoji.png" alt="" /></button>
+    </div>
+
+    <div class="moves">
+      <h2>
+        <span id="computer-choice"></span>
+      </h2>
+      <h2>
+        <span id="user-choice"></span>
+      </h2>
+    </div>
+
+    <div class="result">
+      <h2>
+        <span id="result"></span>
+      </h2>
+    </div>
+
+    <div class="score js-score">
+      <h4 class="js-win win">Wins: 0</h4>
+      <h4 class="js-loose loose">Loose: 0</h4>
+      <h4 class="js-tie tie">Tie: 0</h4>
+    </div>
+
+    <div class="reset-autoplay">
+      <div>
+        <button class="reset">Reset</button>
+      </div>
+      <div>
+        <button class="autoplay">Autoplay</button>
+      </div>
+    </div>
+
+    <!--                  yo                 -->
+    <script src="script.js"></script>
+  </body>
+</html>

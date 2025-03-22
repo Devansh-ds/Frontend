@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 70%;
+  margin: 0 15%;
+  font-family: "Roboto", sans-serif;
+  background-color: rgb(21, 20, 20);
+  color: rgb(240, 231, 231);
+}
+
+.header {
+  margin: 20px auto;
+  padding: 20px;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.choices {
+  height: 25vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.choices button {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 2px solid white;
+  background-color: transparent;
+  margin: 0px 20px;
+}
+
+.choices button img {
+  width: 100%;
+  padding: 20px;
+}
+
+.moves {
+  display: flex;
+  justify-content: center;
+  padding: 0px 0px 10px 0px;
+}
+
+.moves h2 {
+  padding: 10px 40px;
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+
+.moves h2 img {
+  width: 30px;
+  height: 30px;
+}
+
+.result {
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+}
+
+.score {
+  display: flex;
+  justify-content: center;
+  margin: 30px auto;
+}
+
+.score h4 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  padding: 0px 30px;
+}
+
+.reset-autoplay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reset-autoplay div {
+  margin: 0 20px;
+}
+
+button {
+  width: 150px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: rgb(15, 102, 189);
+  color: white;
+  font-weight: 400;
+  font-size: 20px;
+  border: none;
+}
+
+button:active {
+  font-size: 18px;
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.autoplay {
+  background-color: gold;
+  color: rgb(16, 16, 18);
+}
+
+.stop {
+  font-size: 18px;
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+}
