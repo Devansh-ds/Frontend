@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --font-family: "Karla", sans-serif;
+  --body-bg: #1e1f25;
+  --btn-bg: #000;
+  --btn-color: #cbcbcb;
+  --btn-color-hover: #fff;
+  --grad-color1: #eeaf61;
+  --grad-color2: #fb9062;
+  --grad-color3: #ee5d6c;
+  --grad-color4: #ce4993;
+  --grad-color5: #6a0d83;
+}
+
+body {
+  width: 100%;
+  background-color: var(--btn-bg);
+  color: white;
+}
+
+.header {
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+.header h2 {
+  background: -webkit-linear-gradient(var(--grad-color1), var(--grad-color2), var(--grad-color3), var(--grad-color4), var(--grad-color5));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.score-time {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 10px 30px;
+  margin-bottom: 30px;
+}
+
+.score,
+.time {
+  width: 100%;
+}
+
+.score-time h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+#grid {
+  max-width: 80%;
+  width: 400px;
+  height: 400px;
+  background-color: red;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.square {
+  width: 33.3%;
+  height: 33.3%;
+  /* width: 200px;
+  height: 200px; */
+  outline: 1px solid black;
+}
+
+.mole {
+  background-color: blue;
+}
+
+.reset {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.reset button {
+  font-size: 2rem;
+  padding: 10px 50px;
+  border-radius: 20px;
+  background-color: gold;
+  border: none;
+}
+
+.reset button:active {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.toggle {
+  display: none;
+}
+
+.afterGame {
+  display: flex;
+  justify-content: center;
+}
+
+.afterGame h4 {
+  font-size: 2rem;
+  padding: 0px 10px 20px 10px;
+}
