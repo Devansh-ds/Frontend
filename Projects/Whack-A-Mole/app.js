@@ -6,7 +6,7 @@ const beforeGame = document.querySelector(".score-time");
 const afterG = document.querySelector("#afterGameScore");
 
 let hitPosition;
-const gameTime = 10;
+const gameTime = 60;
 let currentTime = gameTime;
 let result = 0;
 let timerId = null;
@@ -35,7 +35,7 @@ squares.forEach((square) => {
 });
 
 function moveMole() {
-  timerId = setInterval(randomSquare, 1000);
+  timerId = setInterval(randomSquare, 500);
 }
 
 document.querySelector(".reset").addEventListener("click", () => {
