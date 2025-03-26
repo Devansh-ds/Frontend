@@ -93,6 +93,7 @@ function moveUser(event) {
         currentPosition[0] += 10;
         drawUser();
       }
+      // fuck me
       break;
   }
 }
