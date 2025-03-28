@@ -1,0 +1,136 @@
+@import url(https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: "Roboto", sans-serif;
+  background: linear-gradient(125deg, #3b08e3, #6f05c6, #6f05c6);
+  overflow: hidden;
+}
+
+.card {
+  margin: 60px auto;
+  width: 60%;
+  min-width: 400px;
+  background-color: white;
+  padding: 30px 30px;
+  border-radius: 15px;
+  max-width: 600px;
+}
+
+.card .heading {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.heading h1 {
+  font-size: 2rem;
+  margin-right: 15px;
+  color: rgb(18, 18, 103);
+  font-weight: 700;
+}
+
+.heading img {
+  width: 2.1rem;
+}
+
+.add-task {
+  width: 100%;
+  background-color: rgb(226, 230, 230);
+  border-radius: 30px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.add-task input {
+  padding: 15px;
+  padding-left: 25px;
+  font-size: 1rem;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: text;
+  color: gray;
+}
+
+.add-task button {
+  background-color: orangered;
+  border: none;
+  outline: none;
+  padding: 15px 50px;
+  border-radius: 30px;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.all-tasks {
+  padding: 10px 20px;
+}
+
+.all-tasks .task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.all-tasks .task .our-task {
+  display: flex;
+  flex: 1;
+}
+
+.our-task h2 {
+  font-size: 16px;
+  font-weight: 500;
+  margin-left: 10px;
+  padding-top: 2px;
+  color: gray;
+  text-align: center;
+  text-decoration: none;
+}
+
+.our-task button {
+  /* padding: 5px 7px 4px; */
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 2px solid gray;
+  outline: none;
+  background-color: transparent;
+  color: white;
+}
+
+.all-tasks .cross {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  background-color: white;
+  color: gray;
+  cursor: pointer;
+}
+
+.our-task .ticked {
+  background-color: orangered;
+  border: none;
+}
+
+.our-task .line-through {
+  text-decoration: line-through;
+}
+
+.all-tasks .cross:hover {
+  background-color: rgb(226, 230, 230);
+}
