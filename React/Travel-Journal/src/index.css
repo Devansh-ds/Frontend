@@ -1,0 +1,190 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+.header {
+  background-color: rgb(230, 67, 67);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4rem;
+  padding: 15px;
+  color: white;
+}
+
+.header i {
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.header h4 {
+  font-weight: 400;
+}
+
+.container {
+  display: flex;
+  padding: 40px 40px 10px 40px;
+  width: 100%;
+}
+
+.container > img {
+  min-height: 100%;
+  width: 35%;
+  border-radius: 10px;
+}
+
+.details {
+  margin-left: 15px;
+  padding: 15px 0;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+}
+
+.location h4 {
+  font-weight: 500;
+  margin-right: 20px;
+}
+
+.location a {
+  color: gray;
+}
+
+.location a:hover {
+  text-decoration: none;
+}
+
+.location > img {
+  height: 15px;
+  width: 12px;
+  margin-right: 5px;
+}
+
+.location-place {
+  margin-bottom: 15px;
+  margin-top: 10px;
+}
+
+.location-date {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.location-desc {
+  line-height: 1.4;
+}
+
+@media (min-width: 768px) {
+  .container > img {
+    height: 200px;
+  }
+}
+
+/* --------------------
+----------------------
+------------------------
+----------------------
+------------------------
+----------------------
+------------------------
+----------------------
+------------------------
+----------------------
+------------------------
+ */
+
+.contacts {
+  margin: 30px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.contact-card {
+  padding: 20px;
+  width: 300px;
+  height: 100%;
+  border-radius: 20px;
+  border: 1px solid gray;
+  margin: 10px;
+}
+
+.contact-card > img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.contact-card h3 {
+  font-size: 2rem;
+  margin: 15px 0;
+}
+
+.info-group {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.info-group > img {
+  width: 18px;
+  margin-right: 10px;
+  margin-top: 2px;
+}
+
+@media (max-width: 680px) {
+  .contact-card {
+    width: 100%;
+    margin: 20px 60px;
+  }
+}
+
+/* --------------------
+----------------------
+------------------------
+----------------------
+------------------------
+----------------------
+------------------------
+----------------------
+------------------------
+----------------------
+------------------------
+ */
+
+.joke-container {
+  width: 100%;
+  margin: 10px 30px;
+  padding: 10px;
+}
+
+.joke {
+  padding: 10px 20px 10px;
+  line-height: 2;
+  border-bottom: 2px solid black;
+  border-width: 80%;
+}
+
+.setup {
+  font-size: 1.2rem;
+}
+
+.punchline > h4 {
+  font-weight: 400;
+  font-size: 1.2rem;
+}
