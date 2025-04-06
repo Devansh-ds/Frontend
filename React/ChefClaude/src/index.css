@@ -1,0 +1,218 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: rgb(240, 242, 243);
+}
+
+/* chef's header */
+
+.chef-header {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+  top: 0;
+}
+
+.chef-header > img {
+  width: 40px;
+  margin-right: 15px;
+}
+
+.chef-header > h2 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+/* chef main body's form */
+
+.chef-form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 40px;
+}
+
+.chef-form > input {
+  width: 40%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid rgb(219, 211, 211);
+  border-radius: 5px;
+  outline: none;
+}
+
+.chef-form > button {
+  width: 20%;
+  border-radius: 5px;
+  background-color: black;
+  color: white;
+  border: 1px solid black;
+  font-size: 1rem;
+  padding: 8px;
+  outline: no;
+}
+
+@media (max-width: 680px) {
+  .chef-form {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .chef-form > button,
+  .chef-form > input {
+    width: 50%;
+  }
+}
+
+/* ingredients list */
+
+.ingredients-container {
+  margin: 30px 150px 30px 80px;
+}
+
+.ingredients-container > h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.ingredients-list {
+  margin-left: 30px;
+  font-size: 1.2rem;
+  color: gray;
+}
+
+.ingredients-list li::marker {
+  color: black;
+}
+
+.list-item {
+  display: flex;
+  justify-content: flex-start;
+  gap: 30px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.list-item h4 {
+  font-size: 1.2rem;
+  font-weight: 400;
+  border: 2px solid black;
+  border-radius: 5px;
+  width: 59%;
+  padding: 8px 20px;
+  color: black;
+}
+
+.list-item > button {
+  padding: 10px 40px;
+  border-radius: 5px;
+  background-color: red;
+  color: white;
+  font-size: 1rem;
+  border: 2px solid red;
+}
+
+.list-item > button:active {
+  background-color: rgb(240, 242, 243);
+  border: 2px solid black;
+  color: black;
+}
+
+/* state learning */
+
+.state-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.state-counter {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.state-counter button {
+  padding: 5px 30px;
+  border: 2px solid rgb(30, 94, 212);
+  background-color: rgb(30, 94, 212);
+  font-size: 3rem;
+  margin: 10px 40px;
+  border-radius: 10px;
+  color: white;
+}
+
+.state-counter button:active {
+  color: rgb(30, 94, 212);
+  background-color: white;
+  border: 2px solid rgb(30, 94, 212);
+}
+
+/* person card's react state object practice */
+
+/* body {
+  background-color: #0c4a6e;
+} */
+
+.person-main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background-color: white;
+  width: 200px;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  height: 350px;
+}
+
+.card .avatar {
+  width: 100%;
+  padding: 10%;
+  padding-bottom: 0;
+}
+
+.card .name {
+  margin-block: 13px;
+  color: #333333;
+}
+
+.card .info {
+  padding: 10px;
+}
+
+.card .favorite {
+  width: 25px;
+  cursor: pointer;
+}
+
+.card .contact {
+  font-size: 0.75rem;
+  color: gray;
+  margin-block: 7px;
+}
+
+.card .favorite-button {
+  border: none;
+  background: transparent;
+}
+
+.card .favorite-button:active {
+  transform: none;
+  box-shadow: none;
+}
