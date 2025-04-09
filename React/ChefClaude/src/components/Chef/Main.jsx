@@ -1,6 +1,11 @@
-import React from "react";
+import "../../index.css";
 
-const ingList = ["Chicken", "Oregano", "Tomatoes"];
+import React from "react";
+import ClaudeRecipe from "./ClaudeRecipe";
+import IngredientsList from "./IngredientsList";
+import { getRecipeFromMistral } from "./ai";
+
+const ingList = ["Oregano", "Tomatoes", "Potato", "Rice", "Wheat", "All spices", "cheese"];
 
 export default function Main() {
   let [ingredients, setIngredients] = React.useState(ingList);
@@ -14,18 +19,18 @@ export default function Main() {
     );
   });
 
+  let [recipe, setRecipe] = React.useState("");
+
   return (
     <main className="chef-main">
-      <form className="chef-form" onSubmit={submitForm}>
+      <form action={submitForm} className="chef-form">
         <input type="text" name="new-ingredient" id="input" placeholder="e.g. oregano" />
         <button className="chef-form-button" type="submit">
           + Add ingredient
         </button>
       </form>
-      <div className="ingredients-container">
-        <h2>Ingredients on hand:</h2>
-        <ul className="ingredients-list">{ingredientsList}</ul>
-      </div>
+      {ingredientsList.length > 0 && <IngredientsList getARecipe={getARecipe} recipeShown={recipe} ingredientsList={ingredientsList} />}
+      {recipe && <ClaudeRecipe recipe={recipe} />}
     </main>
   );
 
@@ -33,16 +38,18 @@ export default function Main() {
     setIngredients((prev) => prev.filter((_, index) => index != indexToDelete));
   }
 
-  function submitForm(event) {
-    event.preventDefault();
-    const formData = new FormData(event.currentTarget);
+  function submitForm(formData) {
     const newIngredient = formData.get("new-ingredient");
-
-    event.currentTarget[0].value = "";
 
     if (newIngredient) {
       let newArr = [...ingredients, newIngredient];
       setIngredients((list) => [...new Set(newArr)]);
     }
+  }
+
+  async function getARecipe() {
+    console.log(ingredientsList);
+    const generatedRecipeMd = await getRecipeFromMistral(ingredients);
+    setRecipe(generatedRecipeMd);
   }
 }

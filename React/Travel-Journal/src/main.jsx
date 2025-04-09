@@ -23,7 +23,7 @@ const capital = nums.map((num) => {
 
 root.render(
   <>
-    <Journal />
+    <Jokes />
   </>
 );
 
@@ -45,9 +45,7 @@ function Journal() {
   return (
     <>
       <Header />
-      <main className="journal-container">
-        {dataEntry}
-      </main>
+      <main className="journal-container">{dataEntry}</main>
     </>
   );
 }
@@ -67,7 +65,7 @@ function Cat() {
 
 function Jokes() {
   const jokesElement = jokesData.map((joke) => {
-    return <Joke setup={joke.setup} punchline={joke.punchline} />;
+    return <Joke key={joke.id} setup={joke.setup} punchline={joke.punchline} />;
   });
 
   return (
