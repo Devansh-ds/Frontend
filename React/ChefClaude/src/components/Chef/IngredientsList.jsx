@@ -7,7 +7,7 @@ export default function IngredientsList(props) {
       </div>
       {!props.recipeShown && props.ingredientsList.length > 2 && (
         <div className="recipe-ready">
-          <div className="recipe-ready-text">
+          <div ref={props.ref} className="recipe-ready-text">
             <h3>Ready for a recipe?</h3>
             <p>Generate a recipe from your list of ingredients.</p>
           </div>

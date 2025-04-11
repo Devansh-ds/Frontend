@@ -4,6 +4,7 @@ import React from "react";
 import ClaudeRecipe from "./ClaudeRecipe";
 import IngredientsList from "./IngredientsList";
 import { getRecipeFromMistral } from "./ai";
+import { useEffect } from "react";
 
 const ingList = ["Oregano", "Tomatoes", "Potato", "Rice", "Wheat", "All spices", "cheese"];
 
@@ -20,6 +21,14 @@ export default function Main() {
   });
 
   let [recipe, setRecipe] = React.useState("");
+  const recipeSection = React.useRef(null);
+  console.log(recipeSection);
+
+  useEffect(() => {
+    if (recipe !== "" && recipeSection.current !== null) {
+      recipeSection.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [recipe, recipeSection.current]);
 
   return (
     <main className="chef-main">
@@ -29,7 +38,9 @@ export default function Main() {
           + Add ingredient
         </button>
       </form>
-      {ingredientsList.length > 0 && <IngredientsList getARecipe={getARecipe} recipeShown={recipe} ingredientsList={ingredientsList} />}
+      {ingredientsList.length > 0 && (
+        <IngredientsList ref={recipeSection} getARecipe={getARecipe} recipeShown={recipe} ingredientsList={ingredientsList} />
+      )}
       {recipe && <ClaudeRecipe recipe={recipe} />}
     </main>
   );
