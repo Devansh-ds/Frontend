@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom";
 
 import Home from "./pages/Home";
 import About from "./pages/About";
+import PageNotFound from "./pages/PageNotFound";
 
 import Vans from "./pages/Vans";
 import VanDetail from "./pages/VanDetail";
@@ -49,6 +50,7 @@ function App() {
 
             <Route path="reviews" element={<Reviews />} />
           </Route>
+          <Route path="*" element={<PageNotFound />} />
         </Route>
       </Routes>
     </BrowserRouter>
